@@ -9,6 +9,7 @@ const punchline = document.querySelector("#punchline");
 
 // Global Variables
 const music = new Audio("assets/sfx/spooky.mp3");
+//setups and punchlines are in two arrays with corresponding indecies between the two
 const setups = [
   "What was the skeleton doing at the hockey game?",
   "Why are skeletons so calm?",
@@ -41,37 +42,44 @@ function playMusic() {
 }
 
 function startHaunt() {
-  //sets a 5 second timer before revealing hidden elements on page, playing music
+  //sets a 5 second timer
   let jumpscare = setTimeout(function () {
+    //removes "hidden" class from parent div in HTML
     container.removeAttribute("class");
+    //autoplays music
     playMusic();
   }, 5000);
 }
 
 function getRandomPun() {
-  //gets a random setup and punchline, prints to HTML elements
+  //create random index
   const index = Math.floor(Math.random() * setups.length);
+  //creates new variable from global setups and punchlines at the randomly generated index
   const headOne = setups[index];
   const headTwo = punchlines[index];
+  //sets the text content of globally defined DOM elements to the generated punchlines
   setup.textContent = headOne;
   punchline.textContent = headTwo;
 }
 
 function reloadPage() {
-  //reloads page after 20 seconds
+  //sets20 second timer
   let reload = setTimeout(function () {
+    //reloads page
     location.reload();
   }, 20000);
 }
 
 function pageStart() {
+  //runs all functions in order on page load
   getRandomPun();
   startHaunt();
   reloadPage();
 }
 
-// Event Listeners
-// document.addEventListener("click", playMusic);
+//Event Listener
+// Because of new Google Chrome policies, music will not autoplay without document interaction. This is probably a good thing, as I tried to autoplay music simply to be annoying.
+document.addEventListener("click", playMusic());
 
 // Initializers
 pageStart();
