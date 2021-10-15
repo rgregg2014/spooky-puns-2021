@@ -48,7 +48,7 @@ function startHaunt() {
     container.removeAttribute("class");
     //autoplays music
     playMusic();
-  }, 5000);
+  }, 3000);
 }
 
 function getRandomPun() {
@@ -78,7 +78,7 @@ function pageStart() {
 }
 
 //Event Listener
-// Because of new Google Chrome policies, music will not autoplay without document interaction. This is probably a good thing, as I tried to autoplay music simply to be annoying.
+// Because of new Google Chrome policies, music will not autoplay without document interaction. This is probably a good thing, as I tried to autoplay music simply to be annoying. So, if you don't click anywhere on the page before the first timeout ends, music won't play. Again, probably a good thing.
 document.addEventListener("click", playMusic());
 
 // Initializers
