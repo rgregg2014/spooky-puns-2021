@@ -42,7 +42,7 @@ function playMusic() {
 
 function startHaunt() {
   //sets a 5 second timer before revealing hidden elements on page
-  let jumpscare = setInterval(function () {
+  let jumpscare = setTimeout(function () {
     container.removeAttribute("class");
   }, 5000);
 }
@@ -56,9 +56,22 @@ function getRandomPun() {
   punchline.textContent = headTwo;
 }
 
+function reloadPage() {
+  let reload = setTimeout(function () {
+    location.reload();
+  }, 20000);
+}
+
+function pageStart() {
+  getRandomPun();
+  startHaunt();
+  reloadPage();
+}
+
 // Event Listeners
 document.addEventListener("click", playMusic);
 
 // Initializers
-startHaunt();
-getRandomPun();
+// startHaunt();
+// getRandomPun();
+pageStart();
