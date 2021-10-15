@@ -27,7 +27,7 @@ There are none. Just visit the deploy link and enjoy!
   
 ## Usage
   
-Load the page and wait. Then the side-splitting laughter ensues.
+Load the page and wait. Then the side-splitting laughter ensues. Here's a [link](https://rgregg2014.github.io/spooky-puns-2021/).
   
 ## Contributing
   
