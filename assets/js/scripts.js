@@ -36,14 +36,15 @@ const punchlines = [
 
 // Functions
 function playMusic() {
-  //plays music on document interaction
+  //plays music
   music.play();
 }
 
 function startHaunt() {
-  //sets a 5 second timer before revealing hidden elements on page
+  //sets a 5 second timer before revealing hidden elements on page, playing music
   let jumpscare = setTimeout(function () {
     container.removeAttribute("class");
+    playMusic();
   }, 5000);
 }
 
@@ -57,6 +58,7 @@ function getRandomPun() {
 }
 
 function reloadPage() {
+  //reloads page after 20 seconds
   let reload = setTimeout(function () {
     location.reload();
   }, 20000);
@@ -69,9 +71,7 @@ function pageStart() {
 }
 
 // Event Listeners
-document.addEventListener("click", playMusic);
+// document.addEventListener("click", playMusic);
 
 // Initializers
-// startHaunt();
-// getRandomPun();
 pageStart();
