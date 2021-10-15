@@ -1,7 +1,9 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
 
+/* Element Styles */
 body {
   background-color: black;
 }
@@ -17,6 +19,7 @@ h2 {
   color: whitesmoke;
 }
 
+/* Class Styles */
 .haunted {
   text-align: center;
   margin-top: 5%;
@@ -27,18 +30,12 @@ h2 {
   justify-content: center;
 }
 
+/* Hides HTML elements until removed by the JavaScript */
 .hidden {
   display: none;
 }
 
-#button {
-  display: flex;
-  justify-content: center;
-  padding: 1.5%;
-  font-family: "IM Fell English SC";
-  margin-left: 41%;
-}
-
+/* CSS Animation */
 #skeleton {
   max-height: 15%;
   max-width: 15%;
